@@ -1,5 +1,5 @@
 {
-  "name": "sound-effects",
+  "name": "node-sound-effects",
   "version": "1.0.1",
   "description": "Play various sound effects within your node scripts.",
   "main": "index.js",
