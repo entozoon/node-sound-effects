@@ -1,13 +1,11 @@
 {
-  "name": "node-sound-effects",
-  "version": "1.0.0",
-  "description": "",
+  "name": "sound-effects",
+  "version": "1.0.1",
+  "description": "Play various sound effects within your node scripts.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon dev.js"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "node-wav-player": "^0.1.0",
     "notes-to-frequencies": "^1.0.0",
@@ -16,5 +14,15 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/entozoon/node-sound-effects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/entozoon/node-sound-effects/issues"
+  },
+  "homepage": "https://github.com/entozoon/node-sound-effects#readme"
 }
