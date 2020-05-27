@@ -1,10 +1,10 @@
 {
   "name": "node-sound-effects",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Play various sound effects within your node scripts.",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon dev.js"
+    "start": "nodemon dev.js --dev"
   },
   "dependencies": {
     "node-wav-player": "^0.1.0",

@@ -1,25 +1,11 @@
-const noteToFrequency = require("notes-to-frequencies");
-const header = require("waveheader");
-const fs = require("fs");
 const player = require("node-wav-player");
 const generatedDir = `${__dirname}/generated`;
 const { createSamplesUpload, createSamplesChange } = require("./createSamples");
-const saveWav = (samples, filename) => {
-  if (fs.existsSync(filename)) return;
-  const file = fs.createWriteStream(filename);
-  file.write(
-    header(samples.length, {
-      bitDepth: 8,
-    })
-  );
-  // -128->127 to 0->255
-  const data = Uint8Array.from(samples, (val) => val + 128);
-  buffer = Buffer.from(data);
-  file.write(buffer);
-  file.end();
-};
+const saveWav = require("./saveWav");
 class SoundEffects {
   constructor() {
+    // Create the various sound effects sets of samples and save as wavs
+    // This could be neater.. a CreateSamples class perhaps, when there are a bunch. Move to TS too
     const samplesUpload = createSamplesUpload();
     saveWav(samplesUpload, `${generatedDir}/upload.wav`);
     const samplesChange = createSamplesChange();

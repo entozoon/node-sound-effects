@@ -1,4 +1,5 @@
 const tone = require("tonegenerator");
+const noteToFrequency = require("notes-to-frequencies");
 const createSamplesUpload = () => {
   const lengthInSecs = 0.05;
   const shape = "triangle"; // triangle, square, sine, saw
@@ -19,9 +20,9 @@ const createSamplesChange = () => {
   const lengthInSecs = 0.05;
   const shape = "triangle";
   const tones = [
-    tone({ shape, lengthInSecs, freq: noteToFrequency("b4"), volume: 10 }),
-    tone({ shape, lengthInSecs, freq: noteToFrequency("c4"), volume: 12 }),
-    tone({ shape, lengthInSecs, freq: noteToFrequency("b4"), volume: 10 }),
+    tone({ shape, lengthInSecs, freq: noteToFrequency("b4"), volume: 5 }),
+    tone({ shape, lengthInSecs, freq: noteToFrequency("c4"), volume: 8 }),
+    tone({ shape, lengthInSecs, freq: noteToFrequency("b4"), volume: 5 }),
   ];
   return [].concat.apply([], tones);
 };
