@@ -21,4 +21,6 @@ soundEffects.play("upload");
 
 | Name   | Description            |
 | ------ | ---------------------- |
+| error  | Bell ring              |
+| change | Doodly doo             |
 | upload | Ascending major melody |
